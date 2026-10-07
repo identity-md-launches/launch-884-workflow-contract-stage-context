@@ -1,0 +1,22 @@
+{
+  "kind": "evm_project",
+  "token": {
+    "contract": "LaunchToken",
+    "name": "Quantum Observatory",
+    "symbol": "QOBS",
+    "decimals": 18
+  },
+  "contracts": [
+    {
+      "contract": "QuantumEngine",
+      "constructorArgs": ["$token"]
+    }
+  ],
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "LaunchToken has no constructor arguments. QuantumEngine receives the deployed launch token and is fully configured in its constructor. It is an ownerless, noncustodial classical quantum-inspired model with eight probabilities, 3600-second epochs, a 1 QOBS observation threshold and at most 1024 observations per epoch. QuantumModel is an internal library embedded in QuantumEngine and needs no separate deployment. No initialization calls are required. The factory supplies the LP, MerkleDistributor and initialization-only PoolInitializationGuard. Pool fields use the canonical native ETH defaults; effective opening price and trading fees are determined by launch policy and services. Policy, allocations, signed artifact linkage, source publication, admission and deployment belong to subsequent service stages."
+}
